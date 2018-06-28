@@ -69,5 +69,5 @@ theme: coney
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ladeyi/blog.git
+  repo: git@github.com:ladeyi/blog.git
   branch: gh-pages
