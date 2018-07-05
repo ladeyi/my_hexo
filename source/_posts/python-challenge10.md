@@ -6,13 +6,13 @@ tags: code
 toc: true
 ---
 
+## [问题](http://www.pythonchallenge.com/pc/return/bull.html) http://www.pythonchallenge.com/pc/return/bull.html
 ## challenge 10 解答思路
 
 ### Regular Expression Solutions
 
 Here's a short & sweet way to get the whole job done, exploiting that regexps have a natural way to say "find the longest sequence starting at the current position consisting of repetitions of the current digit". The "(\d)" matches a digit as group #1, and the "\1" matches the same thing as group #1. Group #0, or m.group(0), is the entire string.
-
-```
+```python
 import re
 def describe(s):
     return "".join([str(len(m.group(0))) + m.group(1)
@@ -25,15 +25,16 @@ print len(s)  # prints 5808
 
 Here's another version of the regular expression portion, broken into two lines. This shows there are multiple ways to write this, and usually a concise way without explicit for loops.
 
-```
+```python
 def describe(s):
     sets = re.findall("(1+|2+|3+)", s)  # like "111", "2", ...
     return "".join([str(len(x))+x[0] for x in sets])
 ```
+<!-- more -->
 
 ### List and reduce
 
-```
+```python
 def push_one(seq, newch):
     if len(seq)==0 or seq[-1][0]!=newch:
         seq.append((newch,1))
@@ -54,7 +55,7 @@ print len(l[30]) # prints 5808
 ```
 
 ### Solution using generators
-```
+```python
 import itertools
 
 def compress(g):
@@ -76,7 +77,7 @@ print len(a)
 
 ### Other solutions
 
-```
+```python
 import re
 from itertools import groupby
 from functools import reduce

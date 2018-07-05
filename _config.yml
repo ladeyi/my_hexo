@@ -7,7 +7,7 @@ title: My Blog
 subtitle: no zuo no die
 description: 记录一些有意义的事
 author: Atum
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: coney
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
